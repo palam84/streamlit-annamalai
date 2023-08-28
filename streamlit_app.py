@@ -5,10 +5,13 @@ with st.sidebar:
     openai_api_key = st.text_input("OpenAI API Key", key="chatbot_api_key", type="password")
     "[Get an OpenAI API key](https://platform.openai.com/account/api-keys)"
     "Project by Annamalai"
+    "You can ask any questions to IntelligentBot!!"
     
 st.title("💬 IntelligentBot")
+st.set_page_config(page_title="IntelligentBot", page_icon="📖", layout="wide")
+st.header("📖IntelligentBot")
 if "messages" not in st.session_state:
-    st.session_state["messages"] = [{"role": "assistant", "content": "How can I help you?"}]
+    st.session_state["messages"] = [{"role": "assistant", "content": "Welcome! How can I help you?"}]
 
 for msg in st.session_state.messages:
     st.chat_message(msg["role"]).write(msg["content"])
