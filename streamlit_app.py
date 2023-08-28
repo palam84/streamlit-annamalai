@@ -8,7 +8,7 @@ with st.sidebar:
     "You can ask any questions to IntelligentBot!!"
     
 st.title("💬 IntelligentBot")
-st.set_page_config(page_title="IntelligentBot", page_icon="📖", layout="wide")
+
 st.header("📖IntelligentBot")
 if "messages" not in st.session_state:
     st.session_state["messages"] = [{"role": "assistant", "content": "Welcome! How can I help you?"}]
