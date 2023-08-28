@@ -9,7 +9,6 @@ with st.sidebar:
     
 st.title("💬 IntelligentBot")
 
-st.header("📖IntelligentBot")
 if "messages" not in st.session_state:
     st.session_state["messages"] = [{"role": "assistant", "content": "Welcome! How can I help you?"}]
 
